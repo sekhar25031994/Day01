@@ -1,0 +1,106 @@
+body {
+  font-size: 56.2%; }
+
+.frame {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-color: red;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.line-1,
+.line-2,
+.line-3 {
+  height: .3rem;
+  width: 5rem;
+  background-color: white; }
+  .line-1.active .line-1,
+  .line-1.active .line-2,
+  .line-1.active .line-3,
+  .line-2.active .line-1,
+  .line-2.active .line-2,
+  .line-2.active .line-3,
+  .line-3.active .line-1,
+  .line-3.active .line-2,
+  .line-3.active .line-3 {
+    background-color: #fff; }
+
+.no-animation {
+  -webkit-animation: none !important;
+  animation: none !important; }
+
+.line-1 {
+  animation: animate-line-1-rev .7s ease-in-out; }
+
+.line-2 {
+  margin: 14px 0;
+  animation: animate-line-2-rev .7s ease-in-out; }
+
+.line-3 {
+  animation: animate-line-3-rev .7s ease-in-out; }
+
+.line-1 {
+  animation: animate-line-1 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards; }
+
+.line-2 {
+  animation: animate-line-2 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards; }
+
+.line-3 {
+  animation: animate-line-3 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards; }
+
+@keyframes animation-line-1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0deg); }
+  100% {
+    transform: translate3d(0, 22px, 0) rotate(45deg); } }
+
+@keyframes animation-line-2 {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0);
+    opacity: 0; } }
+
+@keyframes animation-line-3 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0deg); }
+  100% {
+    transform: translate3d(0, -22px, 0) rotate(135deg); } }
+
+@keyframes animation-line-1-rev {
+  0% {
+    transform: translate3d(0, 22px, 0) rotate(45deg); }
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0deg); }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg); } }
+
+@keyframes animation-line-2-rev {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes animation-line-3 {
+  0% {
+    transform: translate3d(0, -22px, 0) rotate(135deg); }
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0deg); }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg); } }
